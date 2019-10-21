@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
 # Introduction to Algorithms - 3rd Edition
-import numpy as np
 
 def insertionSort(A):
-    A = list(np.copy(A)) #copy
     for j in range(1, len(A)):
         key = A[j]
         i = j - 1
@@ -16,4 +14,3 @@ def insertionSort(A):
 
 l = [5,8,1,2,3,6]
 print(insertionSort(l))
-print(l)
