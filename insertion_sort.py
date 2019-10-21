@@ -1,17 +1,19 @@
+# -*- coding: utf-8 -*-
+# Introduction to Algorithms - 3rd Edition
 import numpy as np
 
-def insertion_sort(list_):
-    list_ = np.copy(list_)
-    for i in range(1, len(list_)):
-        key = list_[i]
-        k = i
-        while k > 0 and key < list_[k - 1]:
-            list_[k] = list_[k - 1]
-            k -= 1
-        list_[k] = key
-    return list(list_)
+def insertionSort(A):
+    A = list(np.copy(A)) #copy
+    for j in range(1, len(A)):
+        key = A[j]
+        i = j - 1
+        while i > -1 and A[i] > key:
+            A[i+1] = A[i]
+            i = i-1
+        A[i+1] = key
+    return A
 
 
-l = [1,5,8,2,4,9,10,3]
-print(insertion_sort(l))
+l = [5,8,1,2,3,6]
+print(insertionSort(l))
 print(l)
