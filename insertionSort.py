@@ -12,5 +12,5 @@ def insertionSort(A):
     return A
 
 
-l = [5,8,1,2,3,6]
+l = [8,9,1,4,5,2,6,7,0,-1,3]
 print(insertionSort(l))
